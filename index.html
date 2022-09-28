@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="shortcut icon" href="./assets/png/bookshelf-icon.png" type="image/x-icon">
+        <title>Bookshelf Apps</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="text-center">BookshelfApps</h1>
+        </header>
+        <main>
+            <section class="container">
+                <h2 class="text-center" id="text-title">Masukkan Buku Baru</h2>
+                <form class="form" action="#" id="formBook">
+                    <div class="form-group form-title">
+                        <label for="title">Judul</label>
+                        <input type="text" id="title" name="title" placeholder="Masukkan Judul" required />
+                    </div>
+                    <div class="form-group form-title">
+                        <label for="author">Penulis</label>
+                        <input type="text" id="author" name="author" placeholder="Masukkan Nama Penulis" required />
+                    </div>
+                    <div class="form-group form-title">
+                        <label for="year">Tahun Terbit</label>
+                        <input type="number" id="year" name="year" placeholder="Masukkan Tahun Terbit" min="0" required />
+                    </div>
+                    <div class="form-group form-inline">
+                        <input type="checkbox" id="isRead" name="isRead" />
+                        <label for="isRead">Selesai dibaca</label>
+                        <span class="checkmark"></span>
+                    </div>
+                    <button type="submit" name="bookSubmit" class="btn-submit">Masukkan Buku ke rak <b>Belum selesai dibaca</b></button>
+                </form>
+                <form class="form" action="#" id="formBookEdit">
+                    <div class="form-group form-title">
+                        <label for="titleEdit">Judul</label>
+                        <input type="text" id="titleEdit" name="titleEdit" placeholder="Masukkan Judul" required />
+                    </div>
+                    <div class="form-group form-title">
+                        <label for="authorEdit">Penulis</label>
+                        <input type="text" id="authorEdit" name="authorEdit" placeholder="Masukkan Nama Penulis" required />
+                    </div>
+                    <div class="form-group form-title">
+                        <label for="yearEdit">Tahun Terbit</label>
+                        <input type="number" id="yearEdit" name="yearEdit" placeholder="Masukkan Tahun Terbit" min="0" required />
+                    </div>
+                    <div class="form-group form-inline">
+                        <input type="checkbox" id="isReadEdit" name="isReadEdit" />
+                        <label for="isReadEdit">Selesai dibaca</label>
+                        <span class="checkmark"></span>
+                    </div>
+                    <button type="submit" name="bookSubmit" class="btn-submit">Update Buku</b></button>
+                </form>
+            </section>
+            <section class="container">
+                <h2 class="text-center">Cari Buku</h2>
+                <form class="form" action="#" id="formSearch">
+                    <input type="text" id="searchBook" name="searchBook" placeholder="Masukkan Judul" />
+                    <button type="submit" id="bookSearchSubmit" name="bookSearchSubmit" class="btn-submit">Cari</button>
+                </form>
+            </section>
+            <section class="container">
+                <h2>Belum Selesai Dibaca</h2>
+                <div id="incompleteBookshelfList" class="book-list">
+                    
+                </div>
+            </section>
+            <section class="container">
+                <h2>Sudah Selesai Dibaca</h2>
+                <div id="completeBookshelfList" class="book-list">
+                   
+                </div>
+            </section>
+        </main>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Apakah anda yakin ingin menghapus buku ini?</p>
+                <div class="confirm-button">
+                    <button class="button-yes">Iya</button>
+                    <button class="button-no">Tidak</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="text-center" style="padding-bottom: 20px">
+                ©
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                All Rights Reserved By <b>Irsal Fathi Farhat</b>
+            </p>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
